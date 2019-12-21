@@ -16,7 +16,8 @@
 
 <body>
     <!-- TODO: Include all your code for the header and home page here -->
-    <!--Modal is added separately to avoid inheritance of style attributes from any other elements-->
+    <!--Modals are added separately to avoid inheritance of style attributes from any other elements-->
+    <!--Sign Up Modal-->
     <div id="signUpModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
@@ -25,16 +26,35 @@
             </div>
             <div class="modal-body">
                 <label for="name" class="modalLabel">Name</label>
-                <input type="text" placeholder="Enter your name" class="modalTextInput"/>
+                <input type="text" placeholder="Enter your name" class="modalTextInput" required>
+                <label for="userName" class="modalLabel">Username</label>
+                <input type="text" placeholder="Enter your username" class="modalTextInput" required>
+                <label for="password" class="modalLabel">Password</label>
+                <input type="password" placeholder="Enter your password" class="modalTextInput" required>
+                <label for="password" class="modalLabel">Confirm Password</label>
+                <input type="password" placeholder="Re-enter your password" class="modalTextInput" required>
+            </div>
+            <div class="modal-footer">
+                <button class="modalButton">Sign Up</button>
+            </div>
+        </div>
+    </div>
+    <!--Sign In Modal-->
+    <div id="signInModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>Welcome Back!</span>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
                 <label for="userName" class="modalLabel">Username</label>
                 <input type="text" placeholder="Enter your username" class="modalTextInput"/>
                 <label for="password" class="modalLabel">Password</label>
                 <input type="password" placeholder="Enter your password" class="modalTextInput"/>
-                <label for="password" class="modalLabel">Confirm Password</label>
-                <input type="password" placeholder="Re-enter your password" class="modalTextInput"/>
             </div>
             <div class="modal-footer">
                 <button class="modalButton">Sign Up</button>
+                <span class="centerText">Not a member ? <a href ="javascript:switchToSignUpModal()">Sign Up</a></span>
             </div>
         </div>
     </div>
@@ -44,8 +64,8 @@
             <p id ="logoSubheading">Explore, Imagine, Create</p>
         </div>
         <div id="loginActionContainer">
-            <button id="signUpButton">Sign Up</button>
-            <button id="signInButton">Sign In</button>
+            <button id="signUpButton" onclick="displaySignUpModal()">Sign Up</button>
+            <button id="signInButton" onclick="displaySignInModal()">Sign In</button>
         </div>
     </header>
     <script src = "./js/common.js"></script>

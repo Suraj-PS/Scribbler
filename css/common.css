@@ -139,3 +139,9 @@ header {
     text-align: center;
     font-size: 1em;
 }
+
+.centerText {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
