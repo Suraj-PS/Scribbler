@@ -16,6 +16,28 @@
 
 <body>
     <!-- TODO: Include all your code for the header and home page here -->
+    <!--Modal is added separately to avoid inheritance of style attributes from any other elements-->
+    <div id="signUpModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>Get Started</span>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <label for="name" class="modalLabel">Name</label>
+                <input type="text" placeholder="Enter your name" class="modalTextInput"/>
+                <label for="userName" class="modalLabel">Username</label>
+                <input type="text" placeholder="Enter your username" class="modalTextInput"/>
+                <label for="password" class="modalLabel">Password</label>
+                <input type="password" placeholder="Enter your password" class="modalTextInput"/>
+                <label for="password" class="modalLabel">Confirm Password</label>
+                <input type="password" placeholder="Re-enter your password" class="modalTextInput"/>
+            </div>
+            <div class="modal-footer">
+                <button class="modalButton">Sign Up</button>
+            </div>
+        </div>
+    </div>
     <header>
         <div id="logoContainer">
             <p id="logoHeading">ScriBBler</p>
@@ -26,6 +48,7 @@
             <button id="signInButton">Sign In</button>
         </div>
     </header>
+    <script src = "./js/common.js"></script>
 </body>
 
 </html>

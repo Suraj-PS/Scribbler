@@ -1,50 +1,141 @@
 header {
     display: flex;
-    flex-direction : row;
-    justify-content : center;
+    flex-direction: row;
+    justify-content: center;
 }
 
 #logoContainer {
-    width : 50%;
+    width: 50%;
 }
 
 #logoHeading {
-    margin-top : 0px;
-    margin-bottom : 2px;
-    font-family : 'Montez', cursive;
-    font-size : 1.75em;
-    color : blue;
+    margin-top: 0px;
+    margin-bottom: 2px;
+    font-family: 'Montez', cursive;
+    font-size: 1.75em;
+    color: blue;
 }
 
 #logoSubheading {
-    margin-top : 2px;
-    margin-bottom : 2px;
-    font-family : 'Ubuntu Mono', monospace;
-    font-size : 0.75em;
-    color : blue;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 0.75em;
+    color: blue;
 }
 
 #loginActionContainer {
-    margin-top : 2px;
-    margin-bottom : 2px;
-    width : 50%;
-    text-align : right;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    width: 50%;
+    text-align: right;
 }
 
 #signUpButton {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
     background-color: blue;
-    color : white;
-    padding-left : 15px;
-    padding-top : 5px;
-    padding-right : 15px;
-    padding-bottom : 5px;
+    color: white;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-bottom: 5px;
 }
 
 #signInButton {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
     background-color: blue;
-    color : white;
-    padding-left : 15px;
-    padding-top : 5px;
-    padding-right : 15px;
-    padding-bottom : 5px;
+    color: white;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-style: solid;
+    border-color: black;
+    border-width: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1.5em;
+}
+
+.modal-body {
+    display:flex;
+    flex-direction:column;
+}
+  
+.modal-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.modalLabel {
+    display: block;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+.modalTextInput {
+    border-style:none;
+    border-radius: 3px;
+    background: #d7dbe0;
+    padding:10px 5px;
+    font-size: 0.9em;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+.modalButton {
+    margin-top : 15px;
+    border-style: none;
+    border-radius:3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #5cb85c;
+    color: white;
+    text-align: center;
+    font-size: 1em;
 }
