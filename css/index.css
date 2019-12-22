@@ -1,4 +1,29 @@
 body {
     background-image: url("../images/background.jpg");
     background-size: cover;
+    
+}
+
+.postActionsContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.postActionsBtn {
+    background-color: orange;
+    color: black;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius:3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 5px;
+    text-align: center;
+    cursor: pointer;
 }

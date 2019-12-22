@@ -53,7 +53,7 @@
                 <input type="password" placeholder="Enter your password" class="modalTextInput"/>
             </div>
             <div class="modal-footer">
-                <button class="modalButton">Sign Up</button>
+                <button class="modalButton">Sign In</button>
                 <span class="centerText">Not a member ? <a href ="javascript:switchToSignUpModal()">Sign Up</a></span>
             </div>
         </div>
@@ -64,11 +64,16 @@
             <p id ="logoSubheading">Explore, Imagine, Create</p>
         </div>
         <div id="loginActionContainer">
-            <button id="signUpButton" onclick="displaySignUpModal()">Sign Up</button>
-            <button id="signInButton" onclick="displaySignInModal()">Sign In</button>
+            <button id="signUpButton" class="loginActionsBtn" onclick="displaySignUpModal()">Sign Up</button>
+            <button id="signInButton" class="loginActionsBtn" onclick="displaySignInModal()">Sign In</button>
         </div>
     </header>
+    <div class="postActionsContainer">
+        <button id="allPostsBtn" class="postActionsBtn" onclick="openBlogListPage()">All Posts</button>
+        <button id="createPostsBtn" class="postActionsBtn">Create Post</button>
+    </div>
     <script src = "./js/common.js"></script>
+    <script src = "./js/index.js"></script>
 </body>
 
 </html>
