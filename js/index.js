@@ -1,5 +1,5 @@
 function openBlogListPage() {
-    window.location.href = "./html/bloglist.html";
+    window.location.href = "./html/postsList.html";
 }
 
 function displayCreatePostModal() {

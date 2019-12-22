@@ -4,119 +4,184 @@
 <head>
     <!-- TODO: Include Font Awesome file here -->
     <!-- TODO: Include Google Fonts file here -->
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "../css/common.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montez&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montez|Ubuntu+Mono&display=swap">
 </head>
 
 <body>
     <!-- TODO: Include code for header here -->
-
+    <div id="signUpModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>Get Started</span>
+                <span class="close fa fa-times"></span>
+            </div>
+            <div class="modal-body">
+                <label for="name" class="modalLabel">Name</label>
+                <input type="text" id="name" placeholder="Enter your name" class="modalTextInput" required>
+                <label for="userName1" class="modalLabel">Username</label>
+                <input type="text" id="userName1" placeholder="Enter your username" class="modalTextInput" required>
+                <label for="password1" class="modalLabel">Password</label>
+                <input type="password" id="password1" placeholder="Enter your password" class="modalTextInput" required>
+                <label for="password" class="modalLabel">Confirm Password</label>
+                <input type="password" id="confirmPassword" placeholder="Re-enter your password" class="modalTextInput" required>
+            </div>
+            <div class="modal-footer">
+                <button class="modalButton">Sign Up</button>
+            </div>
+        </div>
+    </div>
+    <!--Sign In Modal-->
+    <div id="signInModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>Welcome Back!</span>
+                <span class="close fa fa-times"></span>
+            </div>
+            <div class="modal-body">
+                <label for="userName2" class="modalLabel">Username</label>
+                <input type="text" id="userName2" placeholder="Enter your username" class="modalTextInput"/>
+                <label for="password" class="modalLabel">Password</label>
+                <input type="password" id="password2" placeholder="Enter your password" class="modalTextInput"/>
+            </div>
+            <div class="modal-footer">
+                <button class="modalButton">Sign In</button>
+                <span class="centerText">Not a member ? <a href ="javascript:switchToSignUpModal()">Sign Up</a></span>
+            </div>
+        </div>
+    </div>
+    <header>
+        <div id="logoContainer">
+            <p id="logoHeading">ScriBBler</p>
+            <p id ="logoSubheading">Explore, Imagine, Create</p>
+        </div>
+        <div id="loginActionContainer">
+            <button id="signUpButton" class="loginActionsBtn" onclick="displaySignUpModal()">Sign Up</button>
+            <button id="signInButton" class="loginActionsBtn" onclick="displaySignInModal()">Sign In</button>
+        </div>
+    </header>
     <!-- ATTENTION: The HTML code for the list of posts has been given to you. You can feel free to add/delete/modify this code. You need to write the proper CSS and JavaScript code corresponding to this page so that the result looks like the screenshots given to you in the Project Statement. -->
 
     <!-- list of all posts starts here -->
-    <div>
+    <div class="postsContainer">
 
         <!-- post 1 starts here -->
-        <div>
-            <div>
+        <div class="postContainer">
+            <div class="postAuthor">
                 <p>Srishti Gupta</p>
             </div>
 
-            <div>
-                <div>
+            <div class="postContentContainer">
+                <div class="postHeading">
                     <p>‘let’ me be a ‘const’(ant), not a ‘var’(iable)!</p>
                     <span>
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
                     </span>
                 </div>
-                <p>Since JavaScript does not have any type-checking, either of these keywords can be used to declare a variable of any type (datatype) in JavaScript. Though all the three keywords are used for the same purpose, they are different.</p>
-                <span>
-                    <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
-                </span>
+                <div class="postContent">
+                    <p>Since JavaScript does not have any type-checking, either of these keywords can be used to declare a variable of any type (datatype) in JavaScript. Though all the three keywords are used for the same purpose, they are different.</p>
+                    <span>
+                        <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
+                    </span>
+                </div>
             </div>
         </div>
         <!-- post 1 ends here -->
 
         <!-- post 2 starts here -->
-        <div>
-            <div>
+        <div class="postContainer">
+            <div class="postAuthor">
                 <p>Colby Fayock</p>
             </div>
 
-            <div>
-                <div>
+            <div class="postContentContainer">
+                <div class="postHeading">
                     <p>What is linting and how can it save you time?</p>
                     <span>
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
                     </span>
                 </div>
-                <p>One of the biggest challenges in software development is time. It’s something we can’t easily get more of, but linting can help us make the most out of the time we have.</p>
-                <span>
-                    <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
-                </span>
+                <div class="postContent">
+                    <p>One of the biggest challenges in software development is time. It’s something we can’t easily get more of, but linting can help us make the most out of the time we have.</p>
+                    <span>
+                        <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
+                    </span>
+                </div>
             </div>
         </div>
         <!-- post 2 ends here -->
 
         <!-- post 3 starts here -->
-        <div>
-            <div>
+        <div class="postContainer">
+            <div class="postAuthor">
                 <p>Yazeed Bzadough</p>
             </div>
 
-            <div>
-                <div>
+            <div class="postContentContainer">
+                <div class="postHeading">
                     <p>How to Get More Views on Your Tech Blog</p>
                     <span>
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
                     </span>
                 </div>
-                <p>If you're a developer with a Twitter account, you've already seen everyone and their cat start a blog, YouTube channel, or Patreon. We all want to become stars, or at the very least, a recognizable name in the industry.</p>
-                <span>
-                    <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
-                </span>
+                <div class="postContent">
+                    <p>If you're a developer with a Twitter account, you've already seen everyone and their cat start a blog, YouTube channel, or Patreon. We all want to become stars, or at the very least, a recognizable name in the industry.</p>
+                    <span>
+                        <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
+                    </span>
+                </div>
+                
             </div>
         </div>
         <!-- post 3 ends here -->
 
         <!-- post 4 starts here -->
-        <div>
-            <div>
+        <div class="postContainer">
+            <div class="postAuthor">
                 <p>Cedd Burge</p>
             </div>
 
-            <div>
-                <div>
+            <div class="postContentContainer">
+                <div class="postHeading">
                     <p>How to write easily describable code</p>
                     <span>
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
                     </span>
                 </div>
-                <p>When code is not describable using words, most people have to do some mental mapping to turn it in to words. This wastes mental energy, and you run the risk of getting the mapping wrong. Different people will map to different words, which
+                <div class="postContent">
+                    <p>When code is not describable using words, most people have to do some mental mapping to turn it in to words. This wastes mental energy, and you run the risk of getting the mapping wrong. Different people will map to different words, which
                     leads to confusion when discussing the code.</p>
-                <span>
-                    <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
-                </span>
+                    <span>
+                        <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
+                    </span>
+                </div>                
             </div>
         </div>
         <!-- post 4 ends here -->
 
         <!-- post 5 starts here -->
-        <div>
-            <div>
+        <div class="postContainer">
+            <div class="postAuthor">
                 <p>Srishti Gupta</p>
             </div>
 
-            <div>
-                <div>
+            <div class="postContentContainer">
+                <div class="postHeading">
                     <p>Everything you should know about ‘module’ & ‘require’ in Node.js</p>
                     <span>
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
                     </span>
                 </div>
-                <p>Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module
+                <div class="postContent">
+                    <p>Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module
                     named xyz.</p>
-                <span>
-                    <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
-                </span>
+                    <span>
+                        <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
+                    </span>
+                </div>
             </div>
         </div>
         <!-- post 5 ends here -->
@@ -125,6 +190,8 @@
 
     </div>
     <!-- list of all posts ends here -->
+    <script src = "../js/common.js"></script>
+    <script src = "../js/postslist.js"></script>
 </body>
 
 </html>
