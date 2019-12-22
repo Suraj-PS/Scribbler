@@ -7,6 +7,7 @@
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href = "./css/common.css">
     <link rel = "stylesheet" href = "./css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montez&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montez|Ubuntu+Mono&display=swap">
     <title>
@@ -22,17 +23,17 @@
         <div class="modal-content">
             <div class="modal-header">
                 <span>Get Started</span>
-                <span class="close">&times;</span>
+                <span class="close fa fa-times"></span>
             </div>
             <div class="modal-body">
                 <label for="name" class="modalLabel">Name</label>
-                <input type="text" placeholder="Enter your name" class="modalTextInput" required>
-                <label for="userName" class="modalLabel">Username</label>
-                <input type="text" placeholder="Enter your username" class="modalTextInput" required>
-                <label for="password" class="modalLabel">Password</label>
-                <input type="password" placeholder="Enter your password" class="modalTextInput" required>
+                <input type="text" id="name" placeholder="Enter your name" class="modalTextInput" required>
+                <label for="userName1" class="modalLabel">Username</label>
+                <input type="text" id="userName1" placeholder="Enter your username" class="modalTextInput" required>
+                <label for="password1" class="modalLabel">Password</label>
+                <input type="password" id="password1" placeholder="Enter your password" class="modalTextInput" required>
                 <label for="password" class="modalLabel">Confirm Password</label>
-                <input type="password" placeholder="Re-enter your password" class="modalTextInput" required>
+                <input type="password" id="confirmPassword" placeholder="Re-enter your password" class="modalTextInput" required>
             </div>
             <div class="modal-footer">
                 <button class="modalButton">Sign Up</button>
@@ -44,17 +45,35 @@
         <div class="modal-content">
             <div class="modal-header">
                 <span>Welcome Back!</span>
-                <span class="close">&times;</span>
+                <span class="close fa fa-times"></span>
             </div>
             <div class="modal-body">
-                <label for="userName" class="modalLabel">Username</label>
-                <input type="text" placeholder="Enter your username" class="modalTextInput"/>
+                <label for="userName2" class="modalLabel">Username</label>
+                <input type="text" id="userName2" placeholder="Enter your username" class="modalTextInput"/>
                 <label for="password" class="modalLabel">Password</label>
-                <input type="password" placeholder="Enter your password" class="modalTextInput"/>
+                <input type="password" id="password2" placeholder="Enter your password" class="modalTextInput"/>
             </div>
             <div class="modal-footer">
                 <button class="modalButton">Sign In</button>
                 <span class="centerText">Not a member ? <a href ="javascript:switchToSignUpModal()">Sign Up</a></span>
+            </div>
+        </div>
+    </div>
+    <!--Create Post Modal-->
+    <div id="createPostModal" class="modal">
+        <div class="post-modal-content">
+            <div class="modal-header">
+                <span>Pen Your Post</span>
+                <span class="close fa fa-times"></span>
+            </div>
+            <div class="modal-body">
+                <label for="postTitle" class="modalLabel">Title</label>
+                <input type="text" id="postTitle" placeholder="Enter the title of your post" class="modalTextInput"/>
+                <label for="postContent" class="modalLabel">Contents</label>
+                <textarea id="postContent" placeholder="Enter the contents of your post" class="modalTextAreaInput"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="modalButton">Create</button>
             </div>
         </div>
     </div>
@@ -70,7 +89,7 @@
     </header>
     <div class="postActionsContainer">
         <button id="allPostsBtn" class="postActionsBtn" onclick="openBlogListPage()">All Posts</button>
-        <button id="createPostsBtn" class="postActionsBtn">Create Post</button>
+        <button id="createPostsBtn" class="postActionsBtn" onclick="displayCreatePostModal()">Create Post</button>
     </div>
     <script src = "./js/common.js"></script>
     <script src = "./js/index.js"></script>

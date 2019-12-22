@@ -135,3 +135,15 @@ header {
     padding-bottom: 5px;
     text-align: center;
 }
+
+.modalTextAreaInput {
+    border-style:none;
+    border-radius: 3px;
+    background: #d7dbe0;
+    padding:10px 5px;
+    font-family: "Tahoma";
+    font-size: 0.9em;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    height: 150px;
+}
