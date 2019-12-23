@@ -12,7 +12,7 @@
             </title>
     </head>
             
-    <body>
+    <body onload="populatePostContainer()">
         <!--Sign Up Modal-->
         <div id="signUpModal" class="modal">
             <div class="modal-content">
@@ -70,7 +70,7 @@
                 <div class="postHeaderActions">
                     <span class="postAuthor">Post Author</span>
                     <!--Edit Button-->
-                    <button class="postContainerBtn editAndSavePostBtn">Edit <span class="fa fa-pencil-square-o"></span></button>
+                    <button class="postContainerBtn editAndSavePostBtn" onclick="editPost(this)">Edit <span class="fa fa-pencil-square-o"></span></button>
                 </div>
             </div>
             <div class="postBody">
@@ -94,5 +94,6 @@
             </div>
         </div>
         <script src = "../js/common.js"></script>
+        <script src = "../js/post.js"></script>
     </body>
 </html>

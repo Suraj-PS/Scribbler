@@ -26,6 +26,10 @@ function displayDeletePostModal(trashIcon) {
 
 }
 
-function openPostPage() {
+function openPostPage(moreActionsIcon) {
+    var postContainer = document.getElementsByClassName("postContainer")[moreActionsIcon.getAttribute("data-id")];
+    sessionStorage.setItem("Post Title", postContainer.getElementsByClassName("postTitle")[0].innerText);
+    sessionStorage.setItem("Post Author", postContainer.getElementsByClassName("postAuthor")[0].innerText);
+    sessionStorage.setItem("Post Content", postContainer.getElementsByClassName("postContent")[0].innerText);
     window.location.href = "../html/post.html";
 }
