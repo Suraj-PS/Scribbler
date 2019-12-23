@@ -1,3 +1,5 @@
+var likeCount = 0;
+
 // Function to populate the Post Details in the Post Container
 function populatePostContainer() {
     document.getElementsByClassName("postTitle")[0].innerText = sessionStorage.getItem("Post Title");
@@ -34,5 +36,21 @@ function editPost(editBtn) {
         // Change the Post Content border color to Red
         postContentEle.style["border-style"] = "none";
     }
-    
+
+}
+
+function incrementLikeCount() {
+    ++likeCount;
+    displayLikeCount();
+}
+
+function displayLikeCount() {
+    var likeCountDisplayEle = document.getElementsByClassName("postLikeCount")[0];
+
+    if (likeCount === 1) {
+        likeCountDisplayEle.innerText = likeCount + " person likes this!";
+    } else if (likeCount > 1) {
+        likeCountDisplayEle.innerText = likeCount + " persons likes this!";
+    }
+
 }
