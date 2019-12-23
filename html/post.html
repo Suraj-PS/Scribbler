@@ -3,7 +3,7 @@
     <head>
         <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
             <link rel = "stylesheet" href = "../css/common.css">
-            <link rel = "stylesheet" href = "../css/postslist.css">
+            <link rel = "stylesheet" href = "../css/post.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montez&display=swap">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montez|Ubuntu+Mono&display=swap">
@@ -64,6 +64,35 @@
                 <button id="signInButton" class="loginActionsBtn" onclick="displaySignInModal()">Sign In</button>
             </div>
         </header>
+        <div class="postContainer">
+            <div class="postHeader">
+                <h3 class="postTitle">Post Title</h3>
+                <div class="postHeaderActions">
+                    <span class="postAuthor">Post Author</span>
+                    <!--Edit Button-->
+                    <button class="postContainerBtn editAndSavePostBtn">Edit <span class="fa fa-pencil-square-o"></span></button>
+                </div>
+            </div>
+            <div class="postBody">
+                <p class="postContent">Post Body</p>
+            </div>
+            <div class="postActionsContainer">
+                <div>
+                    <button class="postContainerBtn likePostBtn"><span class="fa fa-thumbs-up"></span> Like</button>
+                </div>                
+                <p class="postLikeCount">Be the first to like this!</p>
+                <div>
+                    <textarea class="addCommentArea" placeholder="Leave a comment..."></textarea>
+                </div>
+                <div>
+                    <button class="postContainerBtn addCommentBtn">Comment</button>
+                </div>                
+                <div>All Comments</div>
+                <div class="commentsDisplayContainer">
+                    <div class="comment">First Comment</div>
+                </div>
+            </div>
+        </div>
         <script src = "../js/common.js"></script>
     </body>
 </html>
