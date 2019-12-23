@@ -54,3 +54,33 @@ function displayLikeCount() {
     }
 
 }
+
+function displayCommentsDisplayContainer() {
+    var commentDisplayLbl = document.getElementsByClassName("commentsDisplayLbl")[0];
+    var commentDisplayContainer = document.getElementsByClassName("commentsDisplayContainer")[0];
+    // Display the Label
+    if (commentDisplayContainer.style.display === "") {
+        commentDisplayLbl.style.display = "block";
+    }
+    // Display the Comments Container
+    if (commentDisplayContainer.style.display === "") {
+        commentDisplayContainer.style.display = "flex";
+    }
+
+    console.log("Displayed the Comment Container");
+}
+
+function addComment() {
+    var commentArea = document.getElementsByClassName("addCommentArea")[0];
+    // Validating that there is no empty string in the Comment Section
+    if (commentArea.value === "") {
+        alert("Cannot add an empty comment. Please enter a valid string");
+    } else {
+        displayCommentsDisplayContainer();
+        var commentDisplayContainer = document.getElementsByClassName("commentsDisplayContainer")[0];
+        var commentTemplate = "<div class='comment'>" + commentArea.value + "</div>"
+        // Appending the Post to the top of Existing posts
+        commentDisplayContainer.innerHTML = commentTemplate + commentDisplayContainer.innerHTML;
+    }
+
+}

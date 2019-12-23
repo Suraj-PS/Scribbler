@@ -77,20 +77,16 @@
                 <p class="postContent">Post Body</p>
             </div>
             <div class="postActionsContainer">
-                <div>
+                <div class="likePostContainer">
                     <button class="postContainerBtn likePostBtn" onclick="incrementLikeCount()"><span class="fa fa-thumbs-up"></span> Like</button>
-                </div>                
-                <p class="postLikeCount">Be the first to like this!</p>
-                <div>
+                    <p class="postLikeCount">Be the first to like this!</p>
+                </div>
+                <div class="addCommentContainer">
                     <textarea class="addCommentArea" placeholder="Leave a comment..."></textarea>
+                    <button class="postContainerBtn addCommentBtn" onclick="addComment()">Comment</button>
                 </div>
-                <div>
-                    <button class="postContainerBtn addCommentBtn">Comment</button>
-                </div>                
-                <div>All Comments</div>
-                <div class="commentsDisplayContainer">
-                    <div class="comment">First Comment</div>
-                </div>
+                <div class="commentsDisplayLbl">All Comments</div>
+                <div class="commentsDisplayContainer"></div>
             </div>
         </div>
         <script src = "../js/common.js"></script>

@@ -9,59 +9,38 @@
 }
 
 .postContainer {
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
     display: flex;
     flex-direction: column;
 }
 
 .postHeader {
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
     display: flex;
     flex-direction: column;
     height: 10%;
 }
 
 .postTitle {
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
     text-align: center;
     margin: 0px;
 }
 
 .postHeaderActions {
-    border-style: solid;
-    border-width: 1px;
-    border-color: black;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
 .postBody {
-    border-style: solid;
-    border-width: 1px;
-    border-color: black;
     height: 50%;
 }
 
 .postContent {
-    border-style: solid;
-    border-width: 1px;
-    border-color: black;
     padding-top: 15px;
     padding-bottom: 15px;
     text-align: justify;
 }
 
 .postActionsContainer {
-    border-style: solid;
-    border-width: 1px;
-    border-color: black;
     height: 40%;
     display: flex;
     flex-direction: column;
@@ -77,8 +56,21 @@
     margin: 10px 0px;
 }
 
+.addCommentContainer {
+    margin-bottom: 10px;
+}
+
+.commentsDisplayLbl {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.commentsDisplayLbl {
+    display: none;
+}
+
 .commentsDisplayContainer {
-    display: flex;
+    display: none;
     flex-direction: column;
     background-color: #a6a6a6;
     padding: 15px 10px;
@@ -88,4 +80,6 @@
     background-color: white;
     color: black;
     padding: 5px 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
