@@ -2,16 +2,26 @@ body {
     background-color: #ffeedd;
 }
 
+.postsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .postContainer {
     border-style: solid;
     border-width: 1px;
     border-color: black;
     border-radius: 15px;
-    width: 50%;
-    margin: 50px;
-    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 40%;
+    margin: 30px 50px;
     display: flex;
     flex-direction: row;
+}
+
+.postContainer:hover {
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .postAuthor {
@@ -45,20 +55,57 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    color: #666666;
 }
 
-p {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-align: justify;
+.postTitle {
+    color: #666666;
 }
 
 .deleteBtn {
     cursor: pointer;
+    margin-top: 5px;
+}
+
+.postContent {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    text-align: justify;
+    height: 50%;
 }
 
 .moreActionsIcn {
     float: right;
     cursor: pointer;
+}
+
+.modalBody {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25%; /* Could be more or less, depending on screen size */
+}
+
+.modalTitle {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.modalActionsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.primaryBtn {
+    padding: 5px 20px;
+    background-color: green;
+    color: white;
+}
+
+.secondaryBtn {
+    padding: 5px 20px;
+    background-color: red;
+    color: white;
 }
